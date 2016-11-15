@@ -54,6 +54,8 @@
     SEL selector = NSSelectorFromString([NSString stringWithFormat:@"deer_%@",oldSelString]);
     SEL actionSel = action;
     
+    //types defined in https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
+
     if (class_addMethod(class, selector, (IMP)xs_buttonAction, "v@:@")) {
         Method dis_originalMethod = class_getInstanceMethod(class, actionSel);
         Method dis_swizzledMethod = class_getInstanceMethod(class, selector);

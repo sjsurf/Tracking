@@ -13,8 +13,10 @@
 #import "YYPatientHomeViewController.h"
 @implementation UITableView (Tracking)
 
+//统计cell点击事件
 + (void)load
 {
+    //    [self changeAddTarget];
 
 }
 
